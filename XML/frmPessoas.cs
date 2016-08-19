@@ -13,6 +13,7 @@ namespace XML
 {
     class Pessoa
     {
+
         #region Atributos
         private int codigo;
         private string nome;
@@ -31,7 +32,6 @@ namespace XML
             get { return nome; }
             set { nome = value; }
         }
-
 
         public string Telefone
         {
@@ -59,11 +59,28 @@ namespace XML
             return pessoas;
         }
 
+        public void AdicionarPessoa(Pessoa p)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void ExcluirPessoa(int codigo)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void EditarPessoa(Pessoa pessoa)
+        {
+            throw new System.NotImplementedException();
+        }
+
         #endregion
     }
 
     public partial class frmPessoas : Form
     {
+        List<Pessoa> pessoas = null;
+
         public frmPessoas()
         {
             InitializeComponent();
@@ -71,8 +88,8 @@ namespace XML
 
         private void frmPessoas_Load(object sender, EventArgs e)
         {
-            //pessoas = Pessoa.ListarPessoas();
-            //gridView.DataSource = pessoas;
+            pessoas = Pessoa.ListarPessoas();
+            dataGridViewPessoas.DataSource = pessoas;
         }
     }
 }
