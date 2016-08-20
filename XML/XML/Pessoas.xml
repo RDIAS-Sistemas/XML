@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pessoas>
+  <pessoa codigo="1" nome="Steve Jobs" telefone="2222-2222"/>
+  <pessoa codigo="2" nome="Bill Gates" telefone="3333-3333"/>
+  <pessoa codigo="3" nome="Steve Ballmer" telefone="4444-4444"/>
+  <pessoa codigo="4" nome="Alex Ferreira" telefone="+55 (13) 3202-2050"/>
+  <pessoa codigo="5" nome="Ronaldo Dias" telefone="+55 (13) 3225-2841"/>
+</pessoas>

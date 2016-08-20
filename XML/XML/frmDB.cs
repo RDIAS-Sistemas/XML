@@ -9,8 +9,57 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace XML
+namespace DB
 {
+    class Pagamento
+    {
+        #region Atributos
+        private string codigoLojaErp;
+        private string nsu;
+        private string valorBruto;
+        #endregion
+
+        #region Propriedades
+        public string CodigoLojaErp
+        {
+            get { return CodigoLojaErp; }
+            set { CodigoLojaErp = value; }
+        }
+
+        public string NSU
+        {
+            get { return nsu; }
+            set { nsu = value; }
+        }
+
+        public string ValorBruto
+        {
+            get { return valorBruto; }
+            set { valorBruto = value; }
+        }
+        #endregion
+        #region Métodos
+        //Aqui ficarão os métodos
+        public static List<Pagamento> ListarPagamentos()
+        {
+            List<Pagamento> pagamentos = new List<Pagamento>();
+            XElement xml = XElement.Load("Santour.xml");
+            foreach (XElement x in xml.Elements())
+            {
+                Pagamento p = new Pagamento()
+                {
+                //    codigoLojaErp = x.Attribute("codigoLojaErp").Value,
+                //    nsu = x.Attribute("nsu").Value,
+                //    valorBruto = x.Attribute("valorBruto").Value
+                };
+                //pagamentos.Add(p);
+            }
+            return null;
+            //return pagamentos;
+        }
+        #endregion
+
+    }
     class Pessoa
     {
 
@@ -80,6 +129,7 @@ namespace XML
     public partial class frmPessoas : Form
     {
         List<Pessoa> pessoas = null;
+        List<Pagamento> pagamentos = null;
 
         public frmPessoas()
         {
@@ -88,8 +138,9 @@ namespace XML
 
         private void frmPessoas_Load(object sender, EventArgs e)
         {
-            pessoas = Pessoa.ListarPessoas();
-            dataGridViewPessoas.DataSource = pessoas;
+            //pessoas = Pessoa.ListarPessoas();
+            pagamentos = Pagamento.ListarPagamentos();
+            dataGridViewPessoas.DataSource = pagamentos;
         }
     }
 }
