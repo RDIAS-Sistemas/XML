@@ -1,0 +1,13 @@
+﻿https://www.eextrato.com.br/conciliador/rest/retorno/venda
+
+Content-Type		application/xml
+chaveAcesso			d06edce0a602551a5cfac502071d6370
+chaveSecreta		d5100cb111a6966ecd0fb0b591f76fb5035286f1
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+	<Filtro>
+	<dataPagamentoInicio>2016-08-15</dataPagamentoInicio>
+	<dataPagamentoFim>2016-08-15</dataPagamentoFim>
+	<tipoArquivo>1</tipoArquivo>
+	<pagina>1</pagina>
+</Filtro>
